@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+      "target": "es6",
+      "module": "commonjs",
+      "lib": ["es6","dom","dom.iterable","scripthost"],
+      "declaration": true,
+      "emitDecoratorMetadata":true,
+      "experimentalDecorators": true,
+      "noImplicitAny": false,
+      "outDir": "./dist",
+      "rootDir": "./"
+  }
+}

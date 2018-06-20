@@ -1,0 +1,20 @@
+<div class="paginatorBox" [ngStyle]="paginatorStyle">
+    <div class="currentRow">
+        当前选中 {{ currentRow }} 行数据
+    </div>
+    <div class="currentPages">
+        第 <input type="text" class="currentPages-input" [(ngModel)]="currentPages" (keydown)="pageInputkeydown($event)" (keyup)="pageInputkeyup($event)"> 页/ {{totalPages}} 页
+    </div>
+    <div class="paginator">
+        <a *ngFor="let page of paginatorData" [ngClass]="{'pageDisable':page.pageDisable}" (click)="onPageClick(page)">
+            <span [class]="page.icon"></span>
+        </a>
+    </div>
+    <div class="totalRecords">
+        每页显示
+        <select class="currentPages-select" [(ngModel)]="currentPagesSelect" (change)="selectFn()">
+            <option *ngFor="let option of rowsPerPageOptions" [value]="option">{{ option }}</option>
+        </select> 行 / 共 {{ totalRow }} 行
+    </div>
+    <br style="clear:both;">
+</div>
