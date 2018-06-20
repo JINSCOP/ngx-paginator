@@ -3,7 +3,64 @@ import * as _ from 'lodash';
 @Component({
   selector: 'paginator',
   templateUrl: './paginator.component.html',
-  styleUrls: ['./paginator.component.scss'],
+  styles: [`
+  .paginatorBox {
+    padding: .25em .5em;
+    border: 1px solid #d5d5d5;
+  }
+  .currentRow {
+    width: 20%;
+    float: left;
+    text-align: center;
+  }  
+  .currentPages {
+    width: 20%;
+    float: left;
+    text-align: center;
+  }
+  .currentPages-input {
+    border: 1px solid #d5d5d5;
+    padding: 0 5px;
+    border-radius: 2px;
+    outline: none;
+    position: relative;
+    top: -1.5px;
+    width: 2rem;
+    text-align: right;
+  }
+  .paginator {
+    width: 30%;
+    float: left;
+    text-align: center;
+  }
+  .paginator a {
+    color: #000;
+    border: 1px solid #d5d5d5;
+    border-radius: 2px;
+    margin-right: 10px;
+    padding: 1px 6px;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  .paginator a.pageDisable{
+    opacity: 0.3;
+    cursor: default;
+  }
+  .totalRecords {
+    width: 30%;
+    float: right;
+    text-align: center;
+  }
+  .currentPages-select {
+    border: 1px solid #d5d5d5;
+    padding: 0 5px;
+    border-radius: 2px;
+    outline: none;
+    position: relative;
+    top: -1.5px;
+    text-align: center;
+  }
+  `],
 })
 export class PaginatorComponent {
 
